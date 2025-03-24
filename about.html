@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopVerse - Premium Shopping Experience</title>
+    <title>About Us - ShopVerse</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -22,7 +22,7 @@
                 </div>
                 <nav class="main-nav">
                     <ul class="nav-list">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
                             <a href="products.html">Products <i class="fa-solid fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
@@ -31,7 +31,7 @@
                                 <li><a href="products.html?category=home">Home & Garden</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html" class="active">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -58,93 +58,79 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- About Us Section -->
+    <section class="about-section">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-in">Premium Shopping Experience</h1>
-                <p class="hero-subtitle animate-fade-in">Discover curated products with exceptional quality and design. Shop our collection of electronics, home goods, and fashion.</p>
-                <div class="hero-buttons animate-fade-in">
-                    <a href="products.html" class="btn btn-primary">Shop Now</a>
-                    <a href="about.html" class="btn btn-outline">Learn More</a>
+            <h1 class="section-title animate-fade-in">About ShopVerse</h1>
+            <p class="section-subtitle animate-fade-in">We're dedicated to providing exceptional shopping experiences with carefully curated products that combine quality, innovation, and design.</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2023, ShopVerse began with a simple idea: to create an online marketplace where shoppers could find products that are both beautiful and functional. Our team of experienced buyers travels the world to find unique items that meet our high standards for quality and design.</p>
+                    <p>What started as a small boutique has grown into a comprehensive online store offering a wide range of products across multiple categories. Despite our growth, we maintain the same commitment to excellence that inspired us from day one.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about/about-1.jpg" alt="ShopVerse Team">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Categories Showcase -->
-    <section class="categories">
-        <div class="container">
-            <h2 class="section-title">Shop By Category</h2>
-            <div class="category-grid">
-                <a href="products.html?category=electronics" class="category-card">
-                    <img src="images/categories/electronics.jpg" alt="Electronics">
-                    <h3>Electronics</h3>
-                    <p>Gadgets & Devices</p>
-                </a>
-                <a href="products.html?category=fashion" class="category-card">
-                    <img src="images/categories/fashion.jpg" alt="Fashion">
-                    <h3>Fashion</h3>
-                    <p>Clothing & Accessories</p>
-                </a>
-                <a href="products.html?category=home" class="category-card">
-                    <img src="images/categories/home.jpg" alt="Home & Garden">
-                    <h3>Home & Garden</h3>
-                    <p>Furniture & Decor</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Products -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">New Arrivals</h2>
-                    <p class="section-subtitle">Discover our latest products</p>
+            
+            <div class="separator"></div>
+            
+            <h2 class="section-title">Our Philosophy</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>We believe in offering products that are built to last. Each item in our catalog undergoes rigorous quality checks before being made available to our customers.</p>
                 </div>
-                <a href="products.html?filter=new" class="view-all">
-                    View all <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="product-grid" id="new-products">
-                <!-- Products will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Bestsellers -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Bestsellers</h2>
-                    <p class="section-subtitle">Our most popular products</p>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3>Thoughtful Design</h3>
+                    <p>Good design solves problems. We carefully select products that combine aesthetic appeal with practical functionality.</p>
                 </div>
-                <a href="products.html?filter=bestsellers" class="view-all">
-                    View all <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="product-grid" id="bestseller-products">
-                <!-- Products will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter CTA -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h2>Sign up for our newsletter</h2>
-                    <p>Get the latest updates on new products, special offers, and seasonal sales delivered to your inbox.</p>
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3>Customer Focus</h3>
+                    <p>Everything we do is with our customers in mind. From our intuitive website to our responsive customer service, we aim to make your shopping experience exceptional.</p>
                 </div>
-                <div class="newsletter-form">
-                    <form id="newsletter-form">
-                        <input type="email" id="email-address" name="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about/about-2.jpg" alt="Our Team">
+                </div>
+                <div class="about-text">
+                    <h2>Our Team</h2>
+                    <p>ShopVerse is powered by a diverse team of professionals who share a passion for exceptional products. Our staff includes experienced buyers, customer service specialists, logistics experts, and technology professionals.</p>
+                    <p>Together, we work to ensure that your experience with ShopVerse is seamless, from browsing our catalog to receiving your order. We're united by a common goal: to help you discover products that enhance your life.</p>
+                </div>
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Commitment</h2>
+                    <p>At ShopVerse, we believe that business should be a force for good. That's why we're committed to practicing responsible commerce:</p>
+                    <ul class="commitment-list">
+                        <li>We carefully vet our suppliers to ensure they meet ethical standards for labor practices.</li>
+                        <li>We work to minimize the environmental impact of our operations.</li>
+                        <li>We invest in our local community through partnerships and charitable giving.</li>
+                        <li>We prioritize transparency in all our business practices.</li>
+                    </ul>
+                    <p>Thank you for choosing ShopVerse. We look forward to serving you and continuing to bring you products that inspire and delight.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about/about-3.jpg" alt="Our Commitment">
                 </div>
             </div>
         </div>

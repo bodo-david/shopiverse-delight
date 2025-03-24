@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopVerse - Premium Shopping Experience</title>
+    <title>Product Detail - ShopVerse</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -22,9 +22,9 @@
                 </div>
                 <nav class="main-nav">
                     <ul class="nav-list">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
-                            <a href="products.html">Products <i class="fa-solid fa-chevron-down"></i></a>
+                            <a href="products.html" class="active">Products <i class="fa-solid fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="products.html?category=electronics">Electronics</a></li>
                                 <li><a href="products.html?category=fashion">Fashion</a></li>
@@ -58,93 +58,112 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-in">Premium Shopping Experience</h1>
-                <p class="hero-subtitle animate-fade-in">Discover curated products with exceptional quality and design. Shop our collection of electronics, home goods, and fashion.</p>
-                <div class="hero-buttons animate-fade-in">
-                    <a href="products.html" class="btn btn-primary">Shop Now</a>
-                    <a href="about.html" class="btn btn-outline">Learn More</a>
+            <ul class="breadcrumbs-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#" id="category-link">Category</a></li>
+                <li id="product-name">Product Name</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-content">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img id="main-product-image" src="images/products/placeholder.jpg" alt="Product Image">
+                    </div>
+                    <div class="product-thumbnails" id="product-thumbnails">
+                        <!-- Thumbnails will be loaded here via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 id="product-title">Product Title</h1>
+                    <div class="product-meta">
+                        <div class="product-brand">Brand: <span id="product-brand">Brand Name</span></div>
+                        <div class="product-rating">
+                            <div class="stars" id="product-rating">
+                                <!-- Stars will be loaded here via JavaScript -->
+                            </div>
+                            <span id="review-count">(0 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="product-price">
+                        <span id="product-price">0.00</span>
+                        <span class="vat-info">VAT included</span>
+                    </div>
+                    <div class="product-description" id="product-description">
+                        <!-- Description will be loaded here via JavaScript -->
+                    </div>
+                    <div class="product-attributes" id="product-attributes">
+                        <!-- Attributes will be loaded here via JavaScript -->
+                    </div>
+                    <div class="add-to-cart">
+                        <div class="quantity-selector">
+                            <button id="decrease-quantity" class="quantity-btn">-</button>
+                            <input type="number" id="product-quantity" value="1" min="1" max="99">
+                            <button id="increase-quantity" class="quantity-btn">+</button>
+                        </div>
+                        <button id="add-to-cart-btn" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                    <div class="shipping-info">
+                        <div class="shipping-option">
+                            <i class="fa-solid fa-truck"></i>
+                            <div>
+                                <h4>Postal Service</h4>
+                                <p>1-3 business days</p>
+                            </div>
+                        </div>
+                        <div class="shipping-option">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <div>
+                                <h4>Rapid Courier Service</h4>
+                                <p>Next business day</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Categories Showcase -->
-    <section class="categories">
-        <div class="container">
-            <h2 class="section-title">Shop By Category</h2>
-            <div class="category-grid">
-                <a href="products.html?category=electronics" class="category-card">
-                    <img src="images/categories/electronics.jpg" alt="Electronics">
-                    <h3>Electronics</h3>
-                    <p>Gadgets & Devices</p>
-                </a>
-                <a href="products.html?category=fashion" class="category-card">
-                    <img src="images/categories/fashion.jpg" alt="Fashion">
-                    <h3>Fashion</h3>
-                    <p>Clothing & Accessories</p>
-                </a>
-                <a href="products.html?category=home" class="category-card">
-                    <img src="images/categories/home.jpg" alt="Home & Garden">
-                    <h3>Home & Garden</h3>
-                    <p>Furniture & Decor</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Products -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">New Arrivals</h2>
-                    <p class="section-subtitle">Discover our latest products</p>
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="specifications">Specifications</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
                 </div>
-                <a href="products.html?filter=new" class="view-all">
-                    View all <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="product-grid" id="new-products">
-                <!-- Products will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Bestsellers -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Bestsellers</h2>
-                    <p class="section-subtitle">Our most popular products</p>
+                <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                        <div id="full-description">
+                            <!-- Full description will be loaded here via JavaScript -->
+                        </div>
+                    </div>
+                    <div id="specifications" class="tab-pane">
+                        <table class="specs-table" id="specs-table">
+                            <!-- Specifications will be loaded here via JavaScript -->
+                        </table>
+                    </div>
+                    <div id="reviews" class="tab-pane">
+                        <div id="reviews-container">
+                            <!-- Reviews will be loaded here via JavaScript -->
+                        </div>
+                    </div>
                 </div>
-                <a href="products.html?filter=bestsellers" class="view-all">
-                    View all <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
-            <div class="product-grid" id="bestseller-products">
-                <!-- Products will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Newsletter CTA -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h2>Sign up for our newsletter</h2>
-                    <p>Get the latest updates on new products, special offers, and seasonal sales delivered to your inbox.</p>
-                </div>
-                <div class="newsletter-form">
-                    <form id="newsletter-form">
-                        <input type="email" id="email-address" name="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>You might also like</h2>
+                <div class="product-grid" id="related-products">
+                    <!-- Related products will be loaded here via JavaScript -->
                 </div>
             </div>
         </div>
@@ -218,6 +237,7 @@
     <!-- Scripts -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/currency.js"></script>
 </body>

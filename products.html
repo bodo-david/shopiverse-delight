@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopVerse - Premium Shopping Experience</title>
+    <title>Products - ShopVerse</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -22,9 +22,9 @@
                 </div>
                 <nav class="main-nav">
                     <ul class="nav-list">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
-                            <a href="products.html">Products <i class="fa-solid fa-chevron-down"></i></a>
+                            <a href="products.html" class="active">Products <i class="fa-solid fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="products.html?category=electronics">Electronics</a></li>
                                 <li><a href="products.html?category=fashion">Fashion</a></li>
@@ -58,93 +58,91 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Product Listing Page -->
+    <section class="products-section">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-in">Premium Shopping Experience</h1>
-                <p class="hero-subtitle animate-fade-in">Discover curated products with exceptional quality and design. Shop our collection of electronics, home goods, and fashion.</p>
-                <div class="hero-buttons animate-fade-in">
-                    <a href="products.html" class="btn btn-primary">Shop Now</a>
-                    <a href="about.html" class="btn btn-outline">Learn More</a>
-                </div>
+            <div class="products-header">
+                <h1 id="product-category-title">All Products</h1>
+                <div class="product-count">Showing <span id="product-count">0</span> products</div>
             </div>
-        </div>
-    </section>
 
-    <!-- Categories Showcase -->
-    <section class="categories">
-        <div class="container">
-            <h2 class="section-title">Shop By Category</h2>
-            <div class="category-grid">
-                <a href="products.html?category=electronics" class="category-card">
-                    <img src="images/categories/electronics.jpg" alt="Electronics">
-                    <h3>Electronics</h3>
-                    <p>Gadgets & Devices</p>
-                </a>
-                <a href="products.html?category=fashion" class="category-card">
-                    <img src="images/categories/fashion.jpg" alt="Fashion">
-                    <h3>Fashion</h3>
-                    <p>Clothing & Accessories</p>
-                </a>
-                <a href="products.html?category=home" class="category-card">
-                    <img src="images/categories/home.jpg" alt="Home & Garden">
-                    <h3>Home & Garden</h3>
-                    <p>Furniture & Decor</p>
-                </a>
-            </div>
-        </div>
-    </section>
+            <div class="products-container">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <ul class="filter-list">
+                            <li>
+                                <input type="checkbox" id="category-all" name="category" value="all" checked>
+                                <label for="category-all">All Categories</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="category-electronics" name="category" value="electronics">
+                                <label for="category-electronics">Electronics</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="category-fashion" name="category" value="fashion">
+                                <label for="category-fashion">Fashion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="category-home" name="category" value="home">
+                                <label for="category-home">Home & Garden</label>
+                            </li>
+                        </ul>
+                    </div>
 
-    <!-- New Products -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">New Arrivals</h2>
-                    <p class="section-subtitle">Discover our latest products</p>
-                </div>
-                <a href="products.html?filter=new" class="view-all">
-                    View all <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="product-grid" id="new-products">
-                <!-- Products will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
+                    <div class="filter-group">
+                        <h3>Brands</h3>
+                        <ul class="filter-list">
+                            <li>
+                                <input type="checkbox" id="brand-all" name="brand" value="all" checked>
+                                <label for="brand-all">All Brands</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-techpro" name="brand" value="TechPro">
+                                <label for="brand-techpro">TechPro</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-fashionista" name="brand" value="Fashionista">
+                                <label for="brand-fashionista">Fashionista</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="brand-homeessentials" name="brand" value="HomeEssentials">
+                                <label for="brand-homeessentials">HomeEssentials</label>
+                            </li>
+                        </ul>
+                    </div>
 
-    <!-- Bestsellers -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-title">Bestsellers</h2>
-                    <p class="section-subtitle">Our most popular products</p>
-                </div>
-                <a href="products.html?filter=bestsellers" class="view-all">
-                    View all <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="product-grid" id="bestseller-products">
-                <!-- Products will be loaded here via JavaScript -->
-            </div>
-        </div>
-    </section>
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-range">
+                            <input type="range" id="price-range" min="0" max="5000" step="100" value="5000">
+                            <div class="price-inputs">
+                                <span>0</span>
+                                <span id="price-value">5000</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Newsletter CTA -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h2>Sign up for our newsletter</h2>
-                    <p>Get the latest updates on new products, special offers, and seasonal sales delivered to your inbox.</p>
-                </div>
-                <div class="newsletter-form">
-                    <form id="newsletter-form">
-                        <input type="email" id="email-address" name="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+                    <button id="apply-filters" class="btn btn-primary btn-sm">Apply Filters</button>
+                    <button id="reset-filters" class="btn btn-outline btn-sm">Reset Filters</button>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="products-main">
+                    <div class="products-sort">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+
+                    <div class="product-grid" id="products-grid">
+                        <!-- Products will be loaded here via JavaScript -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,6 +216,7 @@
     <!-- Scripts -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/currency.js"></script>
 </body>
